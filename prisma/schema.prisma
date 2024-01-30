@@ -9,3 +9,12 @@ datasource db {
   provider = "mysql"
   url      = env("DATABASE_URL")
 }
+
+model Coffee {
+  id            Int      @id @default(autoincrement())
+  name          String
+  price         Int
+  caffeine      Decimal
+  processedDate DateTime
+  productCode   String
+}
